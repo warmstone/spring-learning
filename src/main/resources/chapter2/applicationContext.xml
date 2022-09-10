@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:Context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--  开启注解扫描  -->
+<!--    <Context:component-scan base-package="com.warmstone.springaction.chapter2.soundsystem" />-->
+
+    <bean id="sgtPeppers" class="com.warmstone.springaction.chapter2.soundsystem.SgtPeppers" />
+
+<!--    <bean id="mediaPlayer" class="com.warmstone.springaction.chapter2.soundsystem.CDPlayer">-->
+<!--        <constructor-arg ref="sgtPeppers" />-->
+<!--    </bean>-->
+
+    <bean id="mediaPlayer" class="com.warmstone.springaction.chapter2.soundsystem.CDPlayer" c:cd-ref="sgtPeppers"/>
+
+    <bean id="blankDisc" class="com.warmstone.springaction.chapter2.soundsystem.BlankDisc">
+        <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+        <constructor-arg value="The Beatles" />
+    </bean>
+</beans>
