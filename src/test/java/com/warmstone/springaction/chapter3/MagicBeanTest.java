@@ -14,8 +14,16 @@ public class MagicBeanTest {
     @Autowired
     private MagicBean magicBean;
 
+    @Autowired
+    private BlankDisc blankDisc;
+
     @Test
     public void testMagicBeanExists() {
         Assert.assertNotNull(magicBean);
+    }
+
+    @Test
+    public void testBlankDisc() {
+        System.out.println(blankDisc);
     }
 }
