@@ -40,7 +40,7 @@ public class Audience {
     /**
      * 环绕通知
      */
-    @Around("perform()")
+//    @Around("perform()")
     public Object watchPerformance(ProceedingJoinPoint joinPoint) {
         Object object = null;
         try {

@@ -2,6 +2,7 @@ package com.warmstone.springaction.chapter4;
 
 import com.warmstone.springaction.chapter4.concert.AppConfig;
 import com.warmstone.springaction.chapter4.concert.BalletPerformance;
+import com.warmstone.springaction.chapter4.concert.Encoreable;
 import com.warmstone.springaction.chapter4.concert.Performance;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,6 +29,7 @@ public class AudienceTest {
 
     @Test
     public void testAudience() {
-        performance.perform();
+        Encoreable performance = (Encoreable) this.performance;
+        performance.performEncore();
     }
 }

@@ -16,4 +16,6 @@
 <!--    <aop:aspectj-autoproxy proxy-target-class="true" />-->
     <aop:aspectj-autoproxy />
 
+    <bean class="com.warmstone.springaction.chapter4.concert.EncoreableIntroducer" />
+
 </beans>
